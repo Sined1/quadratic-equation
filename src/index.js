@@ -14,5 +14,9 @@ module.exports = function solveEquation(equation) {
   let d = b * b - 4 * a * c;
   let x1 = Math.round((-b + Math.sqrt(d)) / 2 / a);
   let x2 = Math.round((-b - Math.sqrt(d)) / 2 / a);
-  return [x1, x2];
+
+  //right output sequence
+  if (a > 0) {
+    return [x2, x1];
+  } else return [x1, x2];
 }
